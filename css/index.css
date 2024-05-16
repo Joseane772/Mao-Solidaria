@@ -32,7 +32,6 @@ main {
 }
 
 #hero {
-    background-color: #eaeaea;
     padding: 50px 20px;
 }
 
@@ -40,13 +39,68 @@ main {
     margin: 0 0 20px;
 }
 
-.button {
-    display: inline-block;
-    margin: 10px;
+.search-form {
+    margin: 50px 0;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 25px;  /* Rounded corners */
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;  /* Rounded corners */
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #555;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Space between buttons */
+    margin-top: 20px;
+}
+
+.large-button {
+    width: 400px;  /* Larger width for square buttons */
+    height: 300px; /* Larger height for square buttons */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 25px;  /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 120px;
+    
+}
+
+.large-button .button {
+    margin-bottom: 10px;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
     text-decoration: none;
+    border-radius: 25px;  /* Rounded corners */
+}
+
+.large-button .button:hover {
+    background-color: #555;
+}
+
+.text{
+    margin-top: 200px;
 }
 
 footer {
