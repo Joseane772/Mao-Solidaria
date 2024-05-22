@@ -3,10 +3,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #0a99ffb6;
 }
 
 header {
-    background-color: #f4f4f4;
+    background-color: #fff;
     padding: 10px 0;
 }
 
@@ -42,6 +43,7 @@ nav ul li a {
 main {
     padding: 20px;
     text-align: center;
+    color: #11004f;
 }
 
 #hero {
@@ -67,13 +69,13 @@ main {
     padding: 10px 20px;
     border: none;
     border-radius: 25px;  /* Rounded corners */
-    background-color: #333;
+    background-color: #170067;
     color: #fff;
     cursor: pointer;
 }
 
 .search-form button:hover {
-    background-color: #555;
+    background-color: #160067b0;
 }
 
 .buttons {
@@ -83,41 +85,69 @@ main {
     margin-top: 20px;
 }
 
-.large-button {
-    width: 400px;  /* Larger width for square buttons */
-    height: 300px; /* Larger height for square buttons */
+.large-button, .large-button1 {
+    width: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end; /* Align items at the bottom */
     align-items: center;
-    background-color: #eaeaea;
-    border-radius: 25px;  /* Rounded corners */
-    padding: 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 20px; /* Adjust padding */
     text-align: center;
     margin-top: -30px;
     margin-bottom: 120px;
-    
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.large-button .button {
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    background-color: #333;
+.large-button .button, .large-button1 .button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
     color: #fff;
     text-decoration: none;
     border-radius: 25px;  /* Rounded corners */
+    z-index: 1;
 }
 
-.large-button .button:hover {
-    background-color: #555;
+.large-button p, .large-button1 p {
+    margin: 0;
+    padding: 10px 0; /* Adjust padding */
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit text to 2 lines */
+    -webkit-box-orient: vertical;
+    transition: color 0.3s;
 }
 
-.text{
-    margin-top: 200px;
+.large-button:hover, .large-button1:hover {
+    background-color: #0a99ff;
+}
+
+.large-button:hover p, .large-button1:hover p,
+.large-button:hover .button, .large-button1:hover .button {
+    color: #fff;
+}
+
+.large-button img, .large-button1 img {
+    width: 100px; /* Define desired width */
+    height: auto; /* Maintain original aspect ratio */
+     /* Push image to the top */
+
 }
 
 footer {
-    background-color: #333;
+    background-color: #11004f;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -135,66 +165,4 @@ footer ul li {
 
 footer ul li a {
     color: #fff;
-    text-decoration: none;
-}
-
-.filters {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 20px;
-    
-}
-.filter {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.filter label {
-    margin-right: 5px;
-
-}
-.filter select {
-    padding: 5px;
-
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 10px;
-    color: white;
-}
-.navbar .brand {
-    font-size: 1.5em;
-}
-
-ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0;
-}
-li {
-    margin: 10px 0;
-}
-
-.botao{
-    width: 750px;
-    height: 200px;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border: solid 1px rgb(0, 0, 0);
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    background-color: white;
-    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-}
-.botao:hover{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    transform: scale(1.2)
 }
