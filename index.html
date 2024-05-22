@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolsa do Voluntariado</title>
-    <link rel="stylesheet" href="C:\Users\rafae\Desktop\Mao-Solidaria\css\index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="C:\Users\rafae\Desktop\Mao-Solidaria\paginas\oportunidade.html">Oportunidades de Voluntariado</a></li>
+                <li><a href="">Oportunidades de Voluntariado</a></li>
                 <li><a href="#organizacoes">Organizações</a></li>
-                <li><a href="#empresas">Empresas</a></li>
-                <li><a href="#escolas">Escolas</a></li>
                 <li><a href="#testemunhos">Testemunhos</a></li>
                 <li><a href="#contacte-nos">Contacte-nos</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
@@ -23,16 +21,24 @@
     <main>
         <section id="hero">
             <h1>Para dar a mão basta mexer um dedo</h1>
-            <a href="#quero-ser-voluntario" class="button">Quero ser voluntário</a>
-            <a href="#preciso-de-voluntarios" class="button">Preciso de voluntários</a>
+            <form action="/search" method="get" class="search-form">
+                <input type="text" name="q" placeholder="Pesquisar oportunidades">
+                <button type="submit">Pesquisar</button>
+            </form>
         </section>
-        <section id="quero-ser-voluntario">
-            <h2>Quero ser voluntário</h2>
-            <p>Para se candidatar, registe-se como voluntário e pesquise as oportunidades.</p>
-        </section>
-        <section id="preciso-de-voluntarios">
-            <h2>Preciso de voluntários</h2>
-            <p>Se precisa de voluntários, registe-se e crie oportunidades de voluntariado da sua Organização.</p>
+        <section class="buttons">
+            <div class="large-button">
+                <div class="text">
+                    <a href="#" class="button">Quero ser voluntário</a>
+                    <p>Para se candidatar, registe-se como voluntário e pesquise as oportunidades.</p>
+                </div>
+            </div>
+            <div class="large-button">
+                <div class="text">
+                    <a href="#" class="button">Preciso de voluntários</a>
+                    <p>Se precisa de voluntários, registe-se e crie oportunidades de voluntariado da sua Organização.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
