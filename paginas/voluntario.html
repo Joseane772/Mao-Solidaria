@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Voluntário</title>
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <header>
         <nav>
-            <img src="img/image-removebg-preview.png" alt="Logo da Bolsa do Voluntariado" class="logo">
+            <img src="../images/image-removebg-preview.png" alt="Logo da Bolsa do Voluntariado" class="logo">
             <ul>
                 <li><a href="#oportunidades">Oportunidades de Voluntariado</a></li>
                 <li><a href="#organizacoes">Organizações</a></li>
@@ -22,19 +22,18 @@
         </nav>
     </header>
     <main>
-        <section id="Entrar">
-            <h1>Entrar</h1>
+        <section id="Registar">
+            <h1>Registar</h1>
             <form>
+                <label for="nome">Nome</label>
+                <input type="nome" id="nome" name="nome" required>
+                <label for="apelido">Apelido</label>
+                <input type="apelido" id="apelido" name="apelido" required>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
                 <label for="password">Palavra-Chave</label>
                 <input type="password" id="password" name="password" required>
-                <div class="remember-me">
-                    <input type="checkbox" id="remember-me" name="remember-me">
-                    <label for="remember-me">Lembrar-me</label>
-                </div>
                 <button type="submit">Entrar</button>
-                <a href="#">Recuperar a Palavra-Chave</a>
             </form>
         </section>
     </main>
