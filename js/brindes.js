@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    localStorage.setItem('points', 5000); // Set the initial points to 5000
+
+
     const links = document.querySelectorAll('a');
 
     const availablePoints = localStorage.getItem('points');
