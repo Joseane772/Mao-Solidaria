@@ -19,7 +19,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: space-between; /* Distribute space between items */
     padding-left: 20px; 
 }
 
@@ -43,6 +43,43 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icon-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0 10px;
+}
+
+.user-icon-btn button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-icon-btn img {
+    width: 30px; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
 }
 
 main {
@@ -114,6 +151,46 @@ main {
 }
 
 .edit-button:hover {
+    background-color: #555;
+}
+
+/* New points section */
+#points {
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#points h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #666;
+}
+
+.points-content {
+    text-align: left;
+    font-size: 1.4em;
+}
+
+.points-content p {
+    margin: 10px 0;
+}
+
+.shop-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.shop-button:hover {
     background-color: #555;
 }
 
