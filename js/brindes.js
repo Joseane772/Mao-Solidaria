@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a');
 
+    const availablePoints = localStorage.getItem('points');
+    const pointsElement = document.getElementById('points-display');
+    pointsElement.textContent = `Os teus pontos : ${availablePoints}`;
+
+
     links.forEach(link => {
         link.addEventListener('click', function() {
             const clickedId = this.id;
@@ -45,6 +50,7 @@ function deductPoints(points) {
     // Deduct the points
     currentPoints -= points;
     localStorage.setItem('points', currentPoints);
-
+    const pointsElement = document.getElementById('points-display');
+    pointsElement.textContent = `Os teus pontos : ${currentPoints}`;
    return true
 }
