@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-left: 20px; 
+}
+
+nav .logo {
+    width: 80px; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 1000; 
+    padding: 20px;
+    text-align: center;
+}
+
+#hero {
+    background-color: #eaeaea;
+    padding: 50px 20px;
+}
+
+#hero h1 {
+    margin: 0 0 20px;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    padding: 0; 
+    border: none; 
+    background-color: transparent; 
+    box-shadow: none; 
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: normal;
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Garante que o label ocupe toda a largura disponível */
+    max-width: 600px; /* Define uma largura máxima para os labels */
+}
+
+form input[type="email"],
+form input[type="password"],form input[type="nome"],form input[type="apelido"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 400px;
+    
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 10px;
+}
+
+.remember-me input {
+    margin-right: 6px;
+}
+
+.remember-me label {
+    font-size: 14px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d98e8;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+}
+
+form button:hover {
+    background-color: #6fb4ff;
+}
+
+form a {
+    text-align: center;
+    margin-top: 200px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
