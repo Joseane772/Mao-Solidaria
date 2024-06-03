@@ -5,45 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conta do Gestor de Campanha - Bolsa do Voluntariado</title>
     <link rel="stylesheet" href="../css/user_account.css">
+    <script src="../js/manager_account.js" defer></script>
 </head>
-<body>
-    <header>
-        <nav class="nav-bar">
-            <a href="../index.html">
-                <img src="../images/image-removebg-preview.png" alt="Logo da Bolsa do Voluntariado" class="logo">
-            </a>
-            <ul>
-                <li><a href="oportunidade.html">Oportunidades de Voluntariado</a></li>
-                <li><a href="#testemunhos">Testemunhos</a></li>
-                <li><a href="#contacte-nos">Contacte-nos</a></li>
-                <li><a href="#sobre-nos">Sobre nós</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <a href="login.html" class="nav-button">Entrar</a>
-                <a href="register.html" class="nav-button">Registar</a>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav class="nav-bar">
+        <a href="../index.html">
+            <img src="../images/image-removebg-preview.png" alt="Logo da Bolsa do Voluntariado" class="logo">
+        </a>
+        <ul>
+            <li><a href="oportunidade.html">Oportunidades de Voluntariado</a></li>
+            <li><a href="#testemunhos">Testemunhos</a></li>
+            <li><a href="#contacte-nos">Contacte-nos</a></li>
+            <li><a href="#sobre-nos">Sobre nós</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="login.html" class="nav-button">Entrar</a>
+            <a href="register.html" class="nav-button">Registar</a>
+        </div>
+    </nav>
+</header>
     <main>
         <section id="profile">
             <h1>Minha Conta</h1>
             <div class="profile-content">
                 <div class="profile-details">
                     <h2>Detalhes do Gestor de Campanha</h2>
-                    <p><strong>Nome:</strong> Maria Oliveira</p>
-                    <p><strong>Email:</strong> maria.oliveira@example.com</p>
-                    <p><strong>Telefone:</strong> (11) 8765-4321</p>
-                    <p><strong>Endereço:</strong> Rua Exemplo, 456, Rio de Janeiro, RJ</p>
-                    <p><strong>Data de Nascimento:</strong> 15/05/1975</p>
-                    <p><strong>Organização:</strong> ONG Exemplo</p>
-                    <p><strong>Campanhas Ativas:</strong> Campanha A, Campanha B</p>
-                    <p><strong>Campanhas Concluídas:</strong> Campanha C, Campanha D</p>
+                    <p><strong>Nome:</strong> <span id="user_nome">Maria Oliveira</span></p>
+                    <p><strong>Email:</strong> <span id="user_email">maria.oliveira@example.com</span></p>
+                    <p><strong>Telefone:</strong> <span id="user_telefone">(11) 8765-4321</span></p>
+                    <p><strong>Endereço:</strong> <span id="user_endereco">Rua Exemplo, 456, Rio de Janeiro, RJ</span></p>
+                    <p><strong>Data de Nascimento:</strong> <span id="user_nascimento">15/05/1975</span></p>
+                    <p><strong>Organização:</strong> <span id="user_organizacao">ONG Exemplo</span></p>
+                    <p><strong>Campanhas Ativas:</strong> <span id="user_campanhas_ativas">Campanha A, Campanha B</span></p>
+                    <p><strong>Campanhas Concluídas:</strong> <span id="user_campanhas_concluidas">Campanha C, Campanha D</span></p>
                 </div>
                 <div class="profile-image">
                     <img src="../images/manager.jpg" alt="Foto do Gestor de Campanha">
-                    <button class="edit-button">Editar Informações</button>
+                    <button class="edit-button" id="edit-button">Editar Informações</button>
                 </div>
             </div>
+        </section>
+        <section id="edit-profile" style="display: none;">
+            <h2>Editar Informações</h2>
+            <form id="edit-profile-form">
+                <label for="edit_nome">Nome</label>
+                <input type="text" id="edit_nome" name="nome" required>
+                <label for="edit_email">Email</label>
+                <input type="email" id="edit_email" name="email" required>
+                <label for="edit_telefone">Telefone</label>
+                <input type="text" id="edit_telefone" name="telefone">
+                <label for="edit_endereco">Endereço</label>
+                <input type="text" id="edit_endereco" name="endereco">
+                <label for="edit_nascimento">Data de Nascimento</label>
+                <input type="date" id="edit_nascimento" name="nascimento">
+                <label for="edit_organizacao">Organização</label>
+                <input type="text" id="edit_organizacao" name="organizacao">
+                <label for="edit_campanhas_ativas">Campanhas Ativas</label>
+                <input type="text" id="edit_campanhas_ativas" name="campanhas_ativas">
+                <label for="edit_campanhas_concluidas">Campanhas Concluídas</label>
+                <input type="text" id="edit_campanhas_concluidas" name="campanhas_concluidas">
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancel-edit">Cancelar</button>
+            </form>
+        </section>
+        <section id="create-campaign">
+            <h2>Criar Nova Campanha</h2>
+            <form id="create-campaign-form">
+                <label for="name">Nome da Campanha</label>
+                <input type="text" id="name" name="name" required>
+                <label for="desc">Descrição</label>
+                <textarea id="desc" name="desc" required></textarea>
+                <label for="img">URL da Imagem</label>
+                <input type="text" id="img" name="img" required>
+                <button type="submit">Criar Campanha</button>
+            </form>
         </section>
     </main>
     <footer>

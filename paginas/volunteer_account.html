@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conta do Voluntário - Bolsa do Voluntariado</title>
     <link rel="stylesheet" href="../css/user_account.css">
-    <script src="../js/volunteer_account.js"></script>
+    <script src="../js/volunteer_account.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,6 +19,8 @@
                 <li><a href="#contacte-nos">Contacte-nos</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
             </ul>
+            <div class="nav-buttons">
+            </div>
         </nav>
     </header>
     <main>
@@ -27,24 +29,49 @@
             <div class="profile-content">
                 <div class="profile-details">
                     <h2>Detalhes do Voluntário</h2>
-                    <p><strong>Nome:</strong> João Silva</p>
-                    <p><strong>Email:</strong> joao.silva@example.com</p>
-                    <p><strong>Telefone:</strong> (11) 1234-5678</p>
-                    <p><strong>Endereço:</strong> Rua Exemplo, 123, São Paulo, SP</p>
-                    <p><strong>Data de Nascimento:</strong> 01/01/1980</p>
-                    <p><strong>Áreas de Interesse:</strong> Meio Ambiente, Educação, Saúde</p>
+                    <p><strong>Nome:</strong> <span id="user_nome"></span></p>
+                    <p><strong>Email:</strong> <span id="user_email"></span></p>
+                    <p><strong>Telefone:</strong> <span id="user_telefone"></span></p>
+                    <p><strong>Endereço:</strong> <span id="user_endereco"></span></p>
+                    <p><strong>Data de Nascimento:</strong> <span id="user_nascimento"></span></p>
+                    <p><strong>Áreas de Interesse:</strong> <span id="user_interesses"></span></p>
                 </div>
                 <div class="profile-image">
                     <img src="../images/volunteer.jpg" alt="Foto do Voluntário">
-                    <button class="edit-button">Editar Informações</button>
+                    <button class="edit-button" id="edit-button">Editar Informações</button>
                 </div>
             </div>
+        </section>
+        <section id="edit-profile" style="display: none;">
+            <h2>Editar Informações</h2>
+            <form id="edit-profile-form">
+                <label for="edit_nome">Nome</label>
+                <input type="text" id="edit_nome" name="nome" required>
+                <label for="edit_email">Email</label>
+                <input type="email" id="edit_email" name="email" required>
+                <label for="edit_telefone">Telefone</label>
+                <input type="text" id="edit_telefone" name="telefone">
+                <label for="edit_endereco">Endereço</label>
+                <input type="text" id="edit_endereco" name="endereco">
+                <label for="edit_nascimento">Data de Nascimento</label>
+                <input type="date" id="edit_nascimento" name="nascimento">
+                <label for="edit_interesses">Áreas de Interesse</label>
+                <input type="text" id="edit_interesses" name="interesses">
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancel-edit">Cancelar</button>
+            </form>
         </section>
         <section id="points">
             <h2>Meus Pontos</h2>
             <div class="points-content">
                 <p><strong>Total de Pontos:</strong> <span id="user_points"></span></p>
                 <button class="shop-button" onclick="window.location.href='./brindes.html'">Ir para a Loja de Pontos</button>
+            </div>
+        </section>
+        <section id="candidaturas">
+            <h2>Minhas Candidaturas</h2>
+            <div class="candidaturas-content" id="candidaturas-content">
+                <!-- Campaigns will be listed here -->
             </div>
         </section>
     </main>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar</title>
-    <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/login.js"></script>
+    <title>Detalhes da Candidatura</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <Scrip src="..js/update.js"></Scrip>
 </head>
 <body>
     <header>
@@ -26,20 +26,11 @@
         </nav>
     </header>
     <main>
-        <section id="Entrar">
-            <h1>Entrar</h1>
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Palavra-Chave</label>
-                <input type="password" id="password" name="password" required>
-                <div class="remember-me">
-                <input type="checkbox" id="remember-me" name="remember-me">
-                <label for="remember-me">Lembrar-me</label>
-                </div>
-                <button type="submit">Entrar</button>
-                <a href="#">Recuperar a Palavra-Chave</a>
-            </form>
+        <section id="detalhes-campanha">
+            <h1 id="campanha-nome">Nome da Campanha</h1>
+            <img id="campanha-imagem" src="" alt="Imagem da Campanha" width="200" height="200">
+            <p id="campanha-descricao">Descrição da Campanha</p>
+            <button id="candidatar" type="button">Candidatar</button>
         </section>
     </main>
     <footer>
@@ -50,5 +41,6 @@
             <li><a href="#links-uteis">Links úteis</a></li>
         </ul>
     </footer>
+    <script src="../js/detalhes.js"></script>
 </body>
 </html>

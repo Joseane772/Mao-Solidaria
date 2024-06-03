@@ -173,6 +173,15 @@ footer ul li a {
     font-size: 1.5em;
 }
 
+.nav-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #170067;
+    transition: background-color 0.3s;
+}
+
 ul {
     list-style-type: none; /* Remove bullets */
     padding: 0;
