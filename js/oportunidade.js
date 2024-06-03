@@ -35,9 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const campaignsContainer = document.querySelector('main');
     let campaigns = JSON.parse(localStorage.getItem('campaigns')) || [];
-    // add the 3 example campaigns
-    if (campaigns.length <= 3) {
-        campaigns.push([
+
+    // Add the 3 example campaigns only if they are not already present
+    if (campaigns.length === 0) {
+        campaigns = [
             {
                 name: 'Associação Cais',
                 desc: 'DINAMIZADOR - ATIVIDADE DE ALFABETIZAÇÃO ESCRITA E LEITURA',
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: 'Turn On Success',
-                desc: 'OLUNTÁRIOS(AS) PARA NOS APOIAR NO NOSSO BAZAR SEMANAL.',
+                desc: 'VOLUNTÁRIOS(AS) PARA NOS APOIAR NO NOSSO BAZAR SEMANAL.',
                 img: '../images/logo-t-success.jpg'
             },
             {
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 desc: 'VOLUNTÁRIO/A PROFESSOR/A DE TEATRO',
                 img: '../images/oeiras.png'
             }
-        ]);
+        ];
         localStorage.setItem('campaigns', JSON.stringify(campaigns));
     }
     
