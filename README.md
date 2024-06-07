@@ -41,5 +41,7 @@ Na Pagina inicial o utilizador tem a opção de se registar como voluntário ou 
 - Clicar no brinde pretendido
 
 ### Como criar uma campanha
-
+- Aceder como conta de organizador
+- Aceder ao perfil
+- Prencher os dados para nova campanha e clicar em criar
  
