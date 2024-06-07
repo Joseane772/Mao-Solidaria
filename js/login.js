@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     console.log('Current User:', currentUser);
-    if (currentUser && currentUser.email == 'admin@admin.pt') {
+    if (currentUser && currentUser.type == 'organizer') {
         // User is logged in
         console.log('Admin logged in');
         document.querySelector('.nav-buttons').innerHTML = `
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else if(currentUser){
         // User is logged in
+        console.log('Current User:', currentUser);
         document.querySelector('.nav-buttons').innerHTML = `
             <a href='volunteer_account.html'>${currentUser.nome}</a>
             <a href="#" id="logout" class="nav-button">Sair</a>
@@ -56,23 +57,24 @@ document.addEventListener('DOMContentLoaded', function() {
             return existingUser.email === email && existingUser.password === password;
         });
 
-        if (user) {
+        console.log('Existing users:', user);
+
+
+        if (user.type == 'organizer') {
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            alert('Login bem-sucedido');
+            window.location.href = 'manager_account.html';
+        }else if (user) {
             // Store current user in localStorage
             localStorage.setItem('currentUser', JSON.stringify(user));
             // Show success popup
             alert('Login bem-sucedido!');
             // Redirect to a protected page or dashboard
             window.location.href = 'volunteer_account.html'; // Change to your actual dashboard page
-        }else if (email == admin.email && password == admin.password){
-            localStorage.setItem('currentUser', JSON.stringify(admin));
-            alert('Login bem-sucedido!');
-            window.location.href = 'manager_account.html';
         }else{
             // Show error message
             alert('Email ou palavra-chave incorretos. Tente novamente.');
         
         }
-        
-        
     });
 });

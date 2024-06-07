@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if(currentUser){
         // User is logged in
         document.querySelector('.nav-buttons').innerHTML = `
-            <a href='volunteer_account.html'>${currentUser.nome}</a>
+            <a href='manager_account.html'>${currentUser.nome}</a>
             <a href="#" id="logout" class="nav-button">Sair</a>
         `;
         document.getElementById('logout').addEventListener('click', function() {
@@ -37,24 +37,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Get form data
         var nome = document.getElementById('nome').value;
-        var apelido = document.getElementById('apelido').value;
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
+        var organizer = document.getElementById('responsavel').value;
+        var phone = document.getElementById('telefone').value;
+        var endereco = document.getElementById('morada').value;
 
-        
+
 
         // Create user object
         var user = {
-            nome: nome,
-            apelido: apelido,
+            nome: organizer,
+            organizacao: nome,
+            apelido: 'N/A',
             email: email,
             password: password,
-            endereco: 'N/A',
-            telefone: 'N/A',
+            endereco: endereco,
+            telefone: phone,
             nascimento: 'N/A',
             interesses: 'N/A',
-            pontos: localStorage.getItem('points'),
-            type: 'volunteer'
+            type: 'organizer'
         };
 
         // Get existing users from localStorage

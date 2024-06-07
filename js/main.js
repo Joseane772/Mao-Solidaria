@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (currentUser && currentUser.email === 'admin@admin.pt') {
+    if (currentUser && currentUser.type === 'organizer') {
         // User is logged in
         document.querySelector('.nav-buttons').innerHTML = `
             <a href='paginas/manager_account.html'>${currentUser.nome}</a>

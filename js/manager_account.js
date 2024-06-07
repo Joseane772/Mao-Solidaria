@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Document loaded and DOM fully parsed');
-    const currentUser = JSON.parse(localStorage.getItem('admin'));
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     console.log('Current User:', currentUser);
-    if (!currentUser || !currentUser.emil=='admin@admin.pt' || !currentUser.password=='admin') {
+    if (!currentUser || !currentUser.type=='organizer') {
         alert('Você não tem permissão para acessar esta página.');
         window.location.href = '../index.html';
         return;
     }
 
     
-    if (currentUser && currentUser.email == 'admin@admin.pt') {
+    if (currentUser && currentUser.email == 'organizer') {
         // User is logged in
         document.querySelector('.nav-buttons').innerHTML = `
             <a href='manager_account.html'>${currentUser.nome}</a>
